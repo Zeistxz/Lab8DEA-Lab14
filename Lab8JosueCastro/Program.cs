@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<Lab8JosueCastroContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Inyección de dependencias
+// Inyección de dependencias T
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<ClientService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
